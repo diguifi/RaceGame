@@ -788,6 +788,15 @@ MonoBehaviour:
   force: 1500
   carClip: {fileID: 8300000, guid: 702267d4a2cd9c14eb2797416e3f057c, type: 3}
   carAudioSource: {fileID: 82274016418203352}
+  gears:
+  - 10
+  - 8
+  - 6
+  - 4
+  - 3
+  maxRpm: 4500
+  minRpm: 2000
+  soundPitch: 4000
 --- !u!124 &124880987038589792
 Behaviour:
   m_ObjectHideFlags: 1

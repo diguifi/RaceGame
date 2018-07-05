@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 521}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -87,10 +87,10 @@ MonoBehaviour:
     y: 30
     width: 1440
     height: 767
-  m_MinSize: {x: 713, y: 492}
-  m_MaxSize: {x: 18008, y: 14042}
+  m_MinSize: {x: 713, y: 471}
+  m_MaxSize: {x: 18008, y: 14021}
   vertical: 0
-  controlID: 111
+  controlID: 116
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -157,8 +157,8 @@ MonoBehaviour:
     y: 0
     width: 290
     height: 767
-  m_MinSize: {x: 234, y: 492}
-  m_MaxSize: {x: 10004, y: 14042}
+  m_MinSize: {x: 234, y: 471}
+  m_MaxSize: {x: 10004, y: 14021}
   vertical: 1
   controlID: 50
 --- !u!114 &8
@@ -205,8 +205,8 @@ MonoBehaviour:
     y: 0
     width: 290
     height: 338
-  m_MinSize: {x: 204, y: 221}
-  m_MaxSize: {x: 4004, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -259,10 +259,10 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 1033
-    y: 91
-    width: 327
-    height: 615
+    x: 1094
+    y: 92
+    width: 346
+    height: 746
   m_PersistentViewDataDictionary: {fileID: 0}
 --- !u!114 &12
 MonoBehaviour:
@@ -337,19 +337,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Sound/Elements
+    - Assets/Scripts/Elements
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Sound/Elements
+  - Assets/Scripts/Elements
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Davi\Desktop\Diego\Repositorios\RaceGame
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 7a2f0000
-    m_LastClickedID: 12154
-    m_ExpandedIDs: 00000000982900008a2a0000742f000000ca9a3bffffff7f
+    m_SelectedIDs: b4270000
+    m_LastClickedID: 10164
+    m_ExpandedIDs: 00000000862700003428000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -377,7 +377,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000098290000
+    m_ExpandedIDs: 0000000086270000342800003a280000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -542,9 +542,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -4.050676, y: -0.4037552, z: -1.3489408}
+    m_Target: {x: -5.6418667, y: -4.249363, z: 0.61705065}
     speed: 2
-    m_Value: {x: -4.050676, y: -0.4037552, z: -1.3489408}
+    m_Value: {x: -5.6418667, y: -4.249363, z: 0.61705065}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -568,13 +568,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.20171599, y: 0.61713076, z: -0.1678099, w: -0.7418222}
+    m_Target: {x: -0.21006471, y: 0.7390455, z: -0.26684514, w: -0.58178884}
     speed: 2
-    m_Value: {x: -0.20171599, y: 0.61713076, z: -0.1678099, w: -0.7418222}
+    m_Value: {x: -0.21006471, y: 0.7390455, z: -0.26684514, w: -0.58178884}
   m_Size:
-    m_Target: 11.313028
+    m_Target: 20.697836
     speed: 2
-    m_Value: 11.313028
+    m_Value: 20.697836
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -617,7 +617,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: a2f8ffffccf8ffff00000000
+    m_ExpandedIDs: 9efbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
