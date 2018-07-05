@@ -10,6 +10,8 @@ public class Car : MonoBehaviour {
     float acceleration = 0f;
     float speedKmh;
     public float force;
+    public float breakForce;
+    public float maxTorque;
 
     Rigidbody car;
 
@@ -22,6 +24,8 @@ public class Car : MonoBehaviour {
 
     public float maxRpm;
     public float minRpm;
+
+    Vector3 finalForce;
 
     public float soundPitch;
 
@@ -69,7 +73,13 @@ public class Car : MonoBehaviour {
         }
 
         // Forces
-        car.AddForce(transform.forward * force * acceleration);
+        if (acceleration < -0.5f)
+        {
+            car.AddForce(-transform.forward * breakForce);
+            acceleration = 0;
+        }
+        finalForce = transform.forward * ((maxTorque / (actualGear + 1)) + maxTorque / 3) * acceleration;
+        car.AddForce(finalForce);
 
         // Sound
         carAudioSource.pitch = rpm / soundPitch;
@@ -80,5 +90,6 @@ public class Car : MonoBehaviour {
         GUI.Label(new Rect(20, 20, 120, 32), rpm + " RPM");
         GUI.Label(new Rect(20, 40, 120, 32), actualGear + 1 + "nd Gear");
         GUI.Label(new Rect(20, 60, 120, 32), speedKmh + " KM/h");
+        //GUI.Label(new Rect(20, 80, 120, 32), finalForce.magnitude.ToString());
     }
 }
