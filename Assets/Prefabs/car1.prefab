@@ -76,24 +76,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1462963328317406
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4596170908375664}
-  - component: {fileID: 20608600388815790}
-  - component: {fileID: 124880987038589792}
-  - component: {fileID: 81591616311330094}
-  m_Layer: 0
-  m_Name: Main Camera
-  m_TagString: MainCamera
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1565727234471536
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,8 +294,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1923977518280250}
-  m_LocalRotation: {x: 0, y: -0.6959755, z: 0, w: 0.7180656}
-  m_LocalPosition: {x: 0, y: -0.56, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4739598592586770}
@@ -322,10 +304,9 @@ Transform:
   - {fileID: 4056146718822274}
   - {fileID: 4571985581731450}
   - {fileID: 4736719807093920}
-  - {fileID: 4596170908375664}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -88.21, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4571985581731450
 Transform:
   m_ObjectHideFlags: 1
@@ -338,19 +319,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4551316269602322}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4596170908375664
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1462963328317406}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.366, z: -5.121}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4551316269602322}
-  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4602223237291816
 Transform:
@@ -409,42 +377,6 @@ Transform:
   m_Father: {fileID: 4739598592586770}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!20 &20608600388815790
-Camera:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1462963328317406}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: -1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
 --- !u!23 &23138444629804826
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -684,13 +616,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.9058976, z: 3.95}
   m_Center: {x: 0, y: -0.04705119, z: 0}
---- !u!81 &81591616311330094
-AudioListener:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1462963328317406}
-  m_Enabled: 1
 --- !u!82 &82274016418203352
 AudioSource:
   m_ObjectHideFlags: 1
@@ -799,13 +724,6 @@ MonoBehaviour:
   maxRpm: 5000
   minRpm: 3000
   soundPitch: 4000
---- !u!124 &124880987038589792
-Behaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1462963328317406}
-  m_Enabled: 1
 --- !u!146 &146165824437261374
 WheelCollider:
   m_ObjectHideFlags: 1
@@ -833,7 +751,7 @@ WheelCollider:
     m_ExtremumValue: 1
     m_AsymptoteSlip: 0.5
     m_AsymptoteValue: 0.75
-    m_Stiffness: 1
+    m_Stiffness: 0.85
   m_Enabled: 1
 --- !u!146 &146521174839767406
 WheelCollider:
@@ -862,7 +780,7 @@ WheelCollider:
     m_ExtremumValue: 1
     m_AsymptoteSlip: 0.5
     m_AsymptoteValue: 0.75
-    m_Stiffness: 1
+    m_Stiffness: 0.85
   m_Enabled: 1
 --- !u!146 &146625782764375094
 WheelCollider:
@@ -891,7 +809,7 @@ WheelCollider:
     m_ExtremumValue: 1
     m_AsymptoteSlip: 0.5
     m_AsymptoteValue: 0.75
-    m_Stiffness: 1
+    m_Stiffness: 0.85
   m_Enabled: 1
 --- !u!146 &146898731383470618
 WheelCollider:
@@ -920,5 +838,5 @@ WheelCollider:
     m_ExtremumValue: 1
     m_AsymptoteSlip: 0.5
     m_AsymptoteValue: 0.75
-    m_Stiffness: 1
+    m_Stiffness: 0.85
   m_Enabled: 1
