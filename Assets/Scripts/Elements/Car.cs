@@ -15,6 +15,8 @@ public class Car : MonoBehaviour {
 
     Rigidbody car;
 
+    public AnimationCurve wheelCurve;
+
     public AudioClip carClip;
     public AudioSource carAudioSource;
 
@@ -26,12 +28,14 @@ public class Car : MonoBehaviour {
     public float minRpm;
 
     Vector3 finalForce;
+    public Transform centerOfMass;
 
     public float soundPitch;
 
     void Start()
     {
         car = GetComponent<Rigidbody>();
+        car.centerOfMass = centerOfMass.position;
         carAudioSource.clip = carClip;
     }
 
@@ -46,7 +50,7 @@ public class Car : MonoBehaviour {
         // Turn right/left
 		for (int i=0 ; i<guideWheels.Length ; i++)
         {
-            guideWheels[i].steerAngle = direction * 15f;
+            guideWheels[i].steerAngle = direction * wheelCurve.Evaluate(speedKmh);
             guideWheels[i].motorTorque = 1f;
         }
 
@@ -78,7 +82,7 @@ public class Car : MonoBehaviour {
             car.AddForce(-transform.forward * breakForce);
             acceleration = 0;
         }
-        finalForce = transform.forward * ((maxTorque / (actualGear + 1)) + maxTorque / 3) * acceleration;
+        finalForce = transform.forward * ((maxTorque / (actualGear + 1)) + maxTorque / 1.85f) * acceleration;
         car.AddForce(finalForce);
 
         // Sound
