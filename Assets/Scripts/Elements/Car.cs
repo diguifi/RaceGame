@@ -11,6 +11,7 @@ public class Car : MonoBehaviour {
     float speedKmh;
     public float force;
     public float breakForce;
+    public float breakInstability;
     public float maxTorque;
 
     Rigidbody car;
@@ -19,6 +20,7 @@ public class Car : MonoBehaviour {
 
     public AudioClip carClip;
     public AudioSource carAudioSource;
+    public AudioSource screechAudioSource;
 
     float rpm;
     public float[] gears;
@@ -80,6 +82,8 @@ public class Car : MonoBehaviour {
         if (acceleration < -0.5f)
         {
             car.AddForce(-transform.forward * breakForce);
+            car.AddTorque((transform.up * breakInstability * speedKmh / 45f) * direction);
+
             acceleration = 0;
         }
         finalForce = transform.forward * ((maxTorque / (actualGear + 1)) + maxTorque / 1.85f) * acceleration;
@@ -87,6 +91,14 @@ public class Car : MonoBehaviour {
 
         // Sound
         carAudioSource.pitch = rpm / soundPitch;
+
+        if (speedKmh >= 30f)
+        {
+            float angle = Vector3.Angle(transform.forward, car.velocity);
+            float finalValue = (angle / 10f) - 0.3f;
+
+            screechAudioSource.volume = Mathf.Clamp(finalValue, 0f, 1f);
+        }
     }
 
     void OnGUI()

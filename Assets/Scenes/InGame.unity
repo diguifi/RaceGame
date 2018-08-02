@@ -117,7 +117,7 @@ NavMeshSettings:
 Transform:
   m_PrefabParentObject: {fileID: 4551316269602322, guid: 37212541204d96046bcaa008d4653020,
     type: 2}
-  m_PrefabInternal: {fileID: 940870390}
+  m_PrefabInternal: {fileID: 485375093}
 --- !u!1001 &126666838
 Prefab:
   m_ObjectHideFlags: 0
@@ -206,7 +206,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: baec086904791744185aaa07a6cf55c2, type: 2}
   m_IsPrefabParent: 0
---- !u!1001 &940870390
+--- !u!1001 &485375093
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
