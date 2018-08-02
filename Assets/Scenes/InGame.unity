@@ -157,6 +157,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1373206266465972, guid: ab65585021128914f90e641b9df7d28a, type: 2}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
+    - target: {fileID: 1064264384248998, guid: ab65585021128914f90e641b9df7d28a, type: 2}
+      propertyPath: m_TagString
+      value: Grass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab65585021128914f90e641b9df7d28a, type: 2}
   m_IsPrefabParent: 0

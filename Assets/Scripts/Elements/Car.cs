@@ -5,6 +5,7 @@ using UnityEngine;
 public class Car : MonoBehaviour {
 
     public WheelCollider[] guideWheels;
+    WheelsManager[] wheels;
 
     float direction = 0f;
     float acceleration = 0f;
@@ -19,6 +20,9 @@ public class Car : MonoBehaviour {
     public AnimationCurve wheelCurve;
 
     public AudioClip carClip;
+    public AudioClip skidRoad;
+    public AudioClip skidGrass;
+
     public AudioSource carAudioSource;
     public AudioSource screechAudioSource;
 
@@ -39,6 +43,12 @@ public class Car : MonoBehaviour {
         car = GetComponent<Rigidbody>();
         car.centerOfMass = centerOfMass.position;
         carAudioSource.clip = carClip;
+
+        wheels = new WheelsManager[guideWheels.Length];
+        for(int i = 0; i < guideWheels.Length; i++)
+        {
+            wheels[i] = guideWheels[i].GetComponent<WheelsManager>();
+        }
     }
 
     void Update()
@@ -54,6 +64,25 @@ public class Car : MonoBehaviour {
         {
             guideWheels[i].steerAngle = direction * wheelCurve.Evaluate(speedKmh);
             guideWheels[i].motorTorque = 1f;
+
+            if(wheels[i].currentWheel != 0)
+            {
+                car.AddTorque((transform.up * (breakInstability/1.5f) * speedKmh / 45f) * direction);
+
+                if(screechAudioSource.clip != skidGrass)
+                {
+                    screechAudioSource.clip = skidGrass;
+                    screechAudioSource.Play();
+                }
+            }
+            else
+            {
+                if (screechAudioSource.clip != skidRoad)
+                {
+                    screechAudioSource.clip = skidRoad;
+                    screechAudioSource.Play();
+                }
+            }
         }
 
         // Speed and RPM

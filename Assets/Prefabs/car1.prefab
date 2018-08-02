@@ -37,6 +37,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4056146718822274}
   - component: {fileID: 146521174839767406}
+  - component: {fileID: 114963404398731646}
   m_Layer: 0
   m_Name: FL
   m_TagString: Untagged
@@ -85,6 +86,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4084569565286866}
   - component: {fileID: 146898731383470618}
+  - component: {fileID: 114181918658882864}
   m_Layer: 0
   m_Name: FR
   m_TagString: Untagged
@@ -133,6 +135,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4571985581731450}
   - component: {fileID: 146165824437261374}
+  - component: {fileID: 114311600000313678}
   m_Layer: 0
   m_Name: BR
   m_TagString: Untagged
@@ -185,6 +188,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4736719807093920}
   - component: {fileID: 146625782764375094}
+  - component: {fileID: 114043950308329730}
   m_Layer: 0
   m_Name: BL
   m_TagString: Untagged
@@ -735,7 +739,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2e1b6b88f861e8443a5acb4255a30cff, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7510616447509684a9789dadcfa2f9c7, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -806,6 +810,51 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114043950308329730
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1931181379837700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2be285cf3970c20478cab7be2476d4a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wheelTypes:
+  - {fileID: 146273516863179264, guid: 1f3ecfd885760b04b8fda7b3fdb2ebac, type: 2}
+  - {fileID: 146273516863179264, guid: 81a80b92b8e78624fab36183c8e470fc, type: 2}
+  currentWheel: 0
+--- !u!114 &114181918658882864
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1565727234471536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2be285cf3970c20478cab7be2476d4a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wheelTypes:
+  - {fileID: 146273516863179264, guid: 1f3ecfd885760b04b8fda7b3fdb2ebac, type: 2}
+  - {fileID: 146273516863179264, guid: 81a80b92b8e78624fab36183c8e470fc, type: 2}
+  currentWheel: 0
+--- !u!114 &114311600000313678
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1737499218518396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2be285cf3970c20478cab7be2476d4a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wheelTypes:
+  - {fileID: 146273516863179264, guid: 1f3ecfd885760b04b8fda7b3fdb2ebac, type: 2}
+  - {fileID: 146273516863179264, guid: 81a80b92b8e78624fab36183c8e470fc, type: 2}
+  currentWheel: 0
 --- !u!114 &114359532023133358
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -843,6 +892,8 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 0
   carClip: {fileID: 8300000, guid: 702267d4a2cd9c14eb2797416e3f057c, type: 3}
+  skidRoad: {fileID: 8300000, guid: 7510616447509684a9789dadcfa2f9c7, type: 3}
+  skidGrass: {fileID: 8300000, guid: 4b32a7c4e3862074b9d2bd7535b38ea0, type: 3}
   carAudioSource: {fileID: 82274016418203352}
   screechAudioSource: {fileID: 82630134925304208}
   gears:
@@ -855,6 +906,21 @@ MonoBehaviour:
   minRpm: 3000
   centerOfMass: {fileID: 4411501470362196}
   soundPitch: 4000
+--- !u!114 &114963404398731646
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1333916828313048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2be285cf3970c20478cab7be2476d4a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wheelTypes:
+  - {fileID: 146273516863179264, guid: 1f3ecfd885760b04b8fda7b3fdb2ebac, type: 2}
+  - {fileID: 146273516863179264, guid: 81a80b92b8e78624fab36183c8e470fc, type: 2}
+  currentWheel: 0
 --- !u!146 &146165824437261374
 WheelCollider:
   m_ObjectHideFlags: 1
