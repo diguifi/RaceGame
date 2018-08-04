@@ -64,7 +64,10 @@ namespace Diguifi.car
             // Turn right/left
             for (int i = 0; i < guideWheels.Length; i++)
             {
-                guideWheels[i].steerAngle = direction * turningStrength/speedKmh;
+                if(turningStrength > 350 && speedKmh < 5)
+                    guideWheels[i].steerAngle = direction * 100 / speedKmh;
+                else
+                    guideWheels[i].steerAngle = direction * turningStrength/speedKmh;
                 guideWheels[i].motorTorque = 1f;
 
                 if (wheels[i].currentWheel != 0)
@@ -94,7 +97,9 @@ namespace Diguifi.car
             // Gear change
             if (rpm > maxRpm)
             {
-                actualGear++;
+                if(acceleration > 0)
+                    actualGear++;
+
                 if (actualGear == gears.Length)
                 {
                     actualGear--;
@@ -112,8 +117,11 @@ namespace Diguifi.car
             // Forces
             if (acceleration < -0.5f)
             {
-                car.AddForce(-transform.forward * breakForce);
-                car.AddTorque((transform.up * breakInstability * speedKmh / 45f) * direction);
+                if (speedKmh < 20f)
+                {
+                    car.AddForce(-transform.forward * breakForce);
+                    car.AddTorque((transform.up * breakInstability * speedKmh / 45f) * direction);
+                }
 
                 acceleration = 0;
             }
