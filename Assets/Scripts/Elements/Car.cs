@@ -5,40 +5,54 @@ namespace Diguifi.car
 {
     public class Car : MonoBehaviour
     {
-
-        public WheelCollider[] guideWheels;
+        [SerializeField]
+        WheelCollider[] guideWheels;
         WheelsManager[] wheels;
 
         float direction = 0f;
         float acceleration = 0f;
         float speedKmh;
-        public float force;
-        public float breakForce;
-        public float breakInstability;
-        public float maxTorque;
+        [SerializeField]
+        float force;
+        [SerializeField]
+        float breakForce;
+        [SerializeField]
+        float breakInstability;
+        [SerializeField]
+        float maxTorque;
 
         Rigidbody car;
 
-        public int turningStrength;
+        [SerializeField]
+        int turningStrength;
 
-        public AudioClip carClip;
-        public AudioClip skidRoad;
-        public AudioClip skidGrass;
+        [SerializeField]
+        AudioClip carClip;
+        [SerializeField]
+        AudioClip skidRoad;
+        [SerializeField]
+        AudioClip skidGrass;
 
-        public AudioSource carAudioSource;
-        public AudioSource screechAudioSource;
+        [SerializeField]
+        AudioSource carAudioSource;
+        [SerializeField]
+        AudioSource screechAudioSource;
 
         float rpm;
-        public float[] gears;
+        [SerializeField]
+        float[] gears;
         int actualGear = 0;
 
-        public float maxRpm;
-        public float minRpm;
+        [SerializeField]
+        float maxRpm;
+        float minRpm;
 
         Vector3 finalForce;
-        public Transform centerOfMass;
+        [SerializeField]
+        Transform centerOfMass;
 
-        public float soundPitch;
+        [SerializeField]
+        float soundPitch;
 
         void Start()
         {
