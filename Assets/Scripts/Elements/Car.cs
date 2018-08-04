@@ -117,11 +117,8 @@ namespace Diguifi.car
             // Forces
             if (acceleration < -0.5f)
             {
-                if (speedKmh < 20f)
-                {
-                    car.AddForce(-transform.forward * breakForce);
-                    car.AddTorque((transform.up * breakInstability * speedKmh / 45f) * direction);
-                }
+                car.AddForce(-transform.forward * breakForce);
+                car.AddTorque((transform.up * breakInstability * speedKmh / 45f) * direction);
 
                 acceleration = 0;
             }
