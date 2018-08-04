@@ -869,7 +869,7 @@ MonoBehaviour:
   guideWheels:
   - {fileID: 146898731383470618}
   - {fileID: 146521174839767406}
-  force: 1500
+  force: 1400
   breakForce: 5000
   breakInstability: 5000
   maxTorque: 5000
@@ -886,7 +886,6 @@ MonoBehaviour:
   - 4.1
   - 3
   maxRpm: 5000
-  minRpm: 3000
   centerOfMass: {fileID: 4411501470362196}
   soundPitch: 4000
 --- !u!114 &114963404398731646

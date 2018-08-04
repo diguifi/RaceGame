@@ -59,6 +59,7 @@ namespace Diguifi.car
             car = GetComponent<Rigidbody>();
             car.centerOfMass = centerOfMass.position;
             carAudioSource.clip = carClip;
+            screechAudioSource.volume = 0;
 
             wheels = new WheelsManager[guideWheels.Length];
             for (int i = 0; i < guideWheels.Length; i++)
