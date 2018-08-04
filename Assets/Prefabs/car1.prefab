@@ -327,8 +327,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1923977518280250}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: 0.7131056, z: -0, w: 0.70105666}
+  m_LocalPosition: {x: 0.0007921498, y: -1.64, z: -0.00080576097}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4739598592586770}
@@ -340,7 +340,7 @@ Transform:
   - {fileID: 4411501470362196}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90.976006, z: 0}
 --- !u!4 &4571985581731450
 Transform:
   m_ObjectHideFlags: 1
@@ -873,24 +873,7 @@ MonoBehaviour:
   breakForce: 5000
   breakInstability: 5000
   maxTorque: 5000
-  wheelCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 49.18479
-      inSlope: -0.0040896824
-      outSlope: -0.0040896824
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 344.08823
-      value: 47.886257
-      inSlope: -0.0067529073
-      outSlope: -0.0067529073
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
+  turningStrength: 600
   carClip: {fileID: 8300000, guid: 702267d4a2cd9c14eb2797416e3f057c, type: 3}
   skidRoad: {fileID: 8300000, guid: 7510616447509684a9789dadcfa2f9c7, type: 3}
   skidGrass: {fileID: 8300000, guid: 4b32a7c4e3862074b9d2bd7535b38ea0, type: 3}

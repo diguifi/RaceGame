@@ -1,42 +1,44 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class WheelsManager : MonoBehaviour {
-
-    public WheelCollider[] wheelTypes;
-
-    WheelCollider wc;
-    RaycastHit hit;
-
-    public int currentWheel = 0;
-
-    private void Start()
+namespace Diguifi.wheelsManager
+{
+    public class WheelsManager : MonoBehaviour
     {
-        wc = GetComponent<WheelCollider>();
-    }
 
-    private void FixedUpdate()
-    {
-        if(Physics.Raycast(transform.position, -transform.up, out hit, 2f))
+        public WheelCollider[] wheelTypes;
+
+        WheelCollider wc;
+        RaycastHit hit;
+
+        public int currentWheel = 0;
+
+        private void Start()
         {
-            if (hit.collider.tag == "Road")
+            wc = GetComponent<WheelCollider>();
+        }
+
+        private void FixedUpdate()
+        {
+            if (Physics.Raycast(transform.position, -transform.up, out hit, 2f))
             {
-                if (currentWheel != 0)
+                if (hit.collider.tag == "Road")
                 {
-                    currentWheel = 0;
-                    wc.sidewaysFriction = wheelTypes[0].sidewaysFriction;
+                    if (currentWheel != 0)
+                    {
+                        currentWheel = 0;
+                        wc.sidewaysFriction = wheelTypes[0].sidewaysFriction;
+                    }
                 }
-            }
-            if (hit.collider.tag == "Grass")
-            {
-                if (currentWheel != 1)
+                if (hit.collider.tag == "Grass")
                 {
-                    currentWheel = 1;
-                    wc.sidewaysFriction = wheelTypes[1].sidewaysFriction;
+                    if (currentWheel != 1)
+                    {
+                        currentWheel = 1;
+                        wc.sidewaysFriction = wheelTypes[1].sidewaysFriction;
+                    }
                 }
             }
         }
-    }
 
+    }
 }
