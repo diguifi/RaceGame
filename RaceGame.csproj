@@ -243,6 +243,9 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Elements\Car.cs" />
     <Compile Include="Assets\Scripts\Elements\WheelsManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\SceneControl.cs" />
+    <Compile Include="Assets\Scripts\UI\MainMenu\MainMenuUI.cs" />
+    <Compile Include="Assets\Scripts\UI\UIFunctions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shaders\Blend.shader" />

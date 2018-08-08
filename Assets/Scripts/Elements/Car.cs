@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Diguifi.wheelsManager;
 
-namespace Diguifi.car
+namespace Diguifi.CarElement
 {
     public class Car : MonoBehaviour
     {
